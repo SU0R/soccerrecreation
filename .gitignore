@@ -1,0 +1,8 @@
+__pycache__/
+.venv/
+node_modules/
+build/
+src/build/
+dist/
+*.pyc
+_extracted_pdf_text.txt

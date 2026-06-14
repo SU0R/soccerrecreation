@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Soccer Game Manual</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="manual-page">
+      <a class="manual-link" href="/">Back to game</a>
+      <h1>Instruction Manual</h1>
+      <p>
+        This is a browser-deployable version of the original Python/Pygame soccer
+        project. It keeps the same idea: select a player, click where they should
+        move, steal when close to the ball, pass between teammates, and shoot on goal.
+      </p>
+
+      <div class="manual-grid">
+        <section>
+          <h2>Blue Team</h2>
+          <ul>
+            <li><strong>Q</strong>: select B1</li>
+            <li><strong>W</strong>: select B2</li>
+            <li><strong>E</strong>: select B3</li>
+            <li><strong>X</strong>: steal when close to the ball</li>
+            <li><strong>F / S / D</strong>: pass to B1 / B2 / B3</li>
+            <li><strong>A / Z</strong>: move the blue keeper up / down</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Red Team</h2>
+          <ul>
+            <li><strong>I</strong>: select R1</li>
+            <li><strong>O</strong>: select R2</li>
+            <li><strong>P</strong>: select R3</li>
+            <li><strong>L</strong>: steal when close to the ball</li>
+            <li><strong>M / J / K</strong>: pass to R1 / R2 / R3</li>
+            <li><strong>H / N</strong>: move the red keeper up / down</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Ball + Match</h2>
+          <ul>
+            <li><strong>Click</strong>: send the selected player to that location</li>
+            <li><strong>V</strong>: start a shot, then click the target</li>
+            <li><strong>R</strong>: restart the match</li>
+            <li>Score by sending the ball into the opposite goal.</li>
+            <li>The match timer runs for 180 seconds.</li>
+          </ul>
+        </section>
+      </div>
+
+      <section class="notes">
+        <h2>Online Multiplayer Roadmap</h2>
+        <p>
+          The game code now keeps most important match data inside one state object.
+          That makes a future room-based multiplayer version cleaner: clients can send
+          inputs, a shared authority can validate them, and the browser can render the
+          same state. Vercel can host the site, but the realtime socket layer should use
+          a provider such as Pusher, Ably, Supabase Realtime, Liveblocks, or PartyKit.
+        </p>
+      </section>
+    </main>
+  </body>
+</html>

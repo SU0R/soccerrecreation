@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" role="img" aria-label="Soccer stadium background">
+  <rect width="1600" height="1000" fill="#07110b"/>
+  <rect y="560" width="1600" height="440" fill="#13522b"/>
+  <path d="M0 560 C330 470 560 440 800 440 C1040 440 1270 470 1600 560 L1600 660 C1240 580 1030 555 800 555 C570 555 360 580 0 660 Z" fill="#0d2c20"/>
+  <path d="M120 220 C360 105 620 70 800 70 C980 70 1240 105 1480 220 L1410 415 C1190 325 985 295 800 295 C615 295 410 325 190 415 Z" fill="#182019"/>
+  <path d="M210 245 C420 155 650 130 800 130 C950 130 1180 155 1390 245 L1360 330 C1145 260 965 240 800 240 C635 240 455 260 240 330 Z" fill="#d2c177" opacity=".28"/>
+  <g opacity=".22" fill="#f5f1e6">
+    <circle cx="260" cy="250" r="4"/><circle cx="330" cy="222" r="4"/><circle cx="415" cy="198" r="4"/>
+    <circle cx="520" cy="174" r="4"/><circle cx="630" cy="158" r="4"/><circle cx="745" cy="150" r="4"/>
+    <circle cx="855" cy="150" r="4"/><circle cx="970" cy="158" r="4"/><circle cx="1080" cy="174" r="4"/>
+    <circle cx="1185" cy="198" r="4"/><circle cx="1270" cy="222" r="4"/><circle cx="1340" cy="250" r="4"/>
+  </g>
+  <path d="M160 690 C460 620 1140 620 1440 690" fill="none" stroke="#f5f1e6" stroke-width="5" opacity=".28"/>
+  <path d="M430 1000 L760 560 L840 560 L1170 1000" fill="none" stroke="#f5f1e6" stroke-width="4" opacity=".18"/>
+  <circle cx="800" cy="760" r="115" fill="none" stroke="#f5f1e6" stroke-width="5" opacity=".2"/>
+</svg>
