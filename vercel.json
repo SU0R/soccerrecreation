@@ -1,5 +1,5 @@
 {
-  "buildCommand": "python -m pip install -r requirements.txt && npm run build",
+  "buildCommand": "npm run build",
   "outputDirectory": "dist",
   "framework": null,
   "cleanUrls": true,
