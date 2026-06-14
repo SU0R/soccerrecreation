@@ -1,4 +1,4 @@
-import { cp, mkdir, rm } from "node:fs/promises";
+import { cp, mkdir, readFile, rm, writeFile } from "node:fs/promises";
 import { existsSync } from "node:fs";
 import { spawn } from "node:child_process";
 import path from "node:path";
@@ -24,7 +24,18 @@ function run(command, args) {
 await rm(path.join(root, "build"), { recursive: true, force: true });
 await rm(path.join(root, "src", "build"), { recursive: true, force: true });
 await rm(dist, { recursive: true, force: true });
-await run("python", ["-m", "pygbag", "--build", "src/main.py"]);
+await run("python", [
+  "-m",
+  "pygbag",
+  "--build",
+  "--ume_block",
+  "0",
+  "--app_name",
+  "soccer",
+  "--title",
+  "Algonquin Titans Soccer",
+  "src/main.py",
+]);
 
 await mkdir(path.join(dist, "game"), { recursive: true });
 await cp(path.join(root, "public"), dist, { recursive: true });
@@ -34,4 +45,12 @@ if (!existsSync(gameBuild)) {
 }
 
 await cp(gameBuild, path.join(dist, "game"), { recursive: true });
+
+const gameIndex = path.join(dist, "game", "index.html");
+const html = await readFile(gameIndex, "utf8");
+await writeFile(
+  gameIndex,
+  html.replace("if not platform.window.MM.UME:", "if False and not platform.window.MM.UME:"),
+);
+
 console.log("Built dist/ for Vercel.");
